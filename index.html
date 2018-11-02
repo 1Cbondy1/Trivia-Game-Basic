@@ -7,9 +7,6 @@
     <title>Texas Trivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- link to external javaScript file -->
-    <script type="text/javascript" src = "assets/javascript/game.js"></script>
-
     <!-- link to external css files and fonts -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900" rel="stylesheet">
@@ -25,10 +22,10 @@
     <div class = "question">What is the capital of Texas?</div>
 
     <form >
-        <input type="radio" name="choice" value="dallas"> Dallas
-        <input type="radio" name="choice" value="san-antonio"> San Antonio
-        <input type="radio" name="choice" value="austin"> Austin
-        <input type="radio" name="choice" value="lubbock"> Lubbock
+        <input type="radio" name="choice" value="worng"> Dallas
+        <input type="radio" name="choice" value="wrong"> San Antonio
+        <input type="radio" name="choice" value="correct"> Austin
+        <input type="radio" name="choice" value="wrong"> Lubbock
     </form>
 
     <br>
@@ -36,10 +33,10 @@
     <div class = "question">In Austin, which of these is illegal to carry in your pocket?</div>
 
     <form >
-        <input type="radio" name="choice" value="steak-knives"> Steak Knifes
-        <input type="radio" name="choice" value="horseshoes"> Horseshoes
-        <input type="radio" name="choice" value="binder-clips"> Binder Clips
-        <input type="radio" name="choice" value="wire-cutters"> Wire Cutters
+        <input type="radio" name="choice" value="wrong"> Steak Knifes
+        <input type="radio" name="choice" value="wrong"> Horseshoes
+        <input type="radio" name="choice" value="wrong"> Binder Clips
+        <input type="radio" name="choice" value="correct"> Wire Cutters
     </form>
 
     <br>
@@ -47,13 +44,66 @@
     <div class = "question">What is the state bird?</div>
 
     <form >
-        <input type="radio" name="choice" value="steak-knives"> Northern Mockingbird
-        <input type="radio" name="choice" value="horseshoes"> Bald Eagle
-        <input type="radio" name="choice" value="binder-clips"> Brown Pelican
-        <input type="radio" name="choice" value="wire-cutters"> Southern Mockingbird
+        <input type="radio" name="choice" value="correct"> Northern Mockingbird
+        <input type="radio" name="choice" value="wrong"> Bald Eagle
+        <input type="radio" name="choice" value="wrong"> Brown Pelican
+        <input type="radio" name="choice" value="wrong"> Southern Mockingbird
     </form>
 
+    <br>
+
+    <div class = "question">Texas was an independent nation from 1836 until which year?</div>
+
+    <form >
+        <input type="radio" name="choice" value="wrong"> 1868
+        <input type="radio" name="choice" value="wrong"> 2018
+        <input type="radio" name="choice" value="wrong"> 1901
+        <input type="radio" name="choice" value="correct"> 1846
+    </form>
+
+    <br>
+
+    <div class = "question">What is the only natural lake in the state?</div>
+
+    <form >
+        <input type="radio" name="choice" value="wrong"> Lake Travis
+        <input type="radio" name="choice" value="correct"> Caddo Lake
+        <input type="radio" name="choice" value="wrong"> Toledo Bend Reservoir
+        <input type="radio" name="choice" value="wrong"> Lady Bird Lake
+    </form>
+    
+    <br>
+
+    <div class = "question">How much of the nation's total area does Texas take up?</div>
+
+    <form >
+        <input type="radio" name="choice" value="wrong"> 3.8%
+        <input type="radio" name="choice" value="wrong"> 11.7%
+        <input type="radio" name="choice" value="correct"> 7.4%
+        <input type="radio" name="choice" value="wrong"> 18.3%
+    </form>
+    
+    <br>
+
+    <div class = "question">The Heisman is named after the first full-time head coach of which Texas university?</div>
+
+    <form >
+        <input type="radio" name="choice" value="correct"> Rice University
+        <input type="radio" name="choice" value="wrong"> Texas State University
+        <input type="radio" name="choice" value="wrong"> University of Texas at Austin
+        <input type="radio" name="choice" value="wrong"> Southern Methodist University
+    </form>
+    
+    <br>
+
     <button id = "done-button">Done!</button>
+    <button id = "restart-button">Restart!</button>
+
+    <!-- link to external javaScript file -->
+    <script type="text/javascript" src = "assets/javascript/game.js"></script>
+
+    <!-- link to external javaScript file -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 
