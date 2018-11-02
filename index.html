@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Texas Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link to external javaScript file -->
+    <script src="assets/javascript/game.js"></script>
+
+    <!-- link to external css files and fonts -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900" rel="stylesheet">
+
+    <style>
+
+        /* font-family: 'Cherry Swash', cursive;
+        font-family: 'Fascinate Inline', cursive;
+        font-family: 'Rammetto One', cursive; */
+
+        body {
+            text-align: center;
+            margin: auto;
+        }
+        header {
+            display: inline block;
+            letter-spacing: 4px;
+            color: white;
+            position: fixed;
+            top: 0px;
+            padding: 0px;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 25px;
+            /* background: linear-gradient(to right, red, white, white, blue); */
+            background: linear-gradient(to bottom right, rgb(255, 164, 27), rgb(179, 71, 0));
+            border-bottom: lightgrey solid 3px;
+            border-radius: 6px;
+            width: 100%;
+            margin: 0px auto;
+        }
+        #time-remaining {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .question {
+            line-height: 4;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #done-button {
+            font-family: 'Alegreya Sans', sans-serif;
+            color: rgb(51, 51, 51);
+            background: linear-gradient(lightgrey, white);
+            margin-top: 50px;
+            font-size: 30px;
+            padding: 5px 15px 5px 15px;
+            border-radius: 6px;
+            border-bottom: grey solid 3px;
+            border-right: grey solid 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header><h1>Texas Trivia<div id = "time-remaining">1:00</div></h1></header>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class = "question">What is the capital of Texas?</div>
+
+    <form >
+        <input type="radio" name="choice" value="dallas"> Dallas
+        <input type="radio" name="choice" value="san-antonio"> San Antonio
+        <input type="radio" name="choice" value="austin"> Austin
+        <input type="radio" name="choice" value="lubbock"> Lubbock
+    </form>
+
+    <br>
+
+    <div class = "question">In Austin, which of these is illegal to carry in your pocket?</div>
+
+    <form >
+        <input type="radio" name="choice" value="steak-knives"> Steak Knifes
+        <input type="radio" name="choice" value="horseshoes"> Horseshoes
+        <input type="radio" name="choice" value="binder-clips"> Binder Clips
+        <input type="radio" name="choice" value="wire-cutters"> Wire Cutters
+    </form>
+
+    <br>
+
+    <div class = "question">What is the state bird?</div>
+
+    <form >
+        <input type="radio" name="choice" value="steak-knives"> Northern Mockingbird
+        <input type="radio" name="choice" value="horseshoes"> Bald Eagle
+        <input type="radio" name="choice" value="binder-clips"> Brown Pelican
+        <input type="radio" name="choice" value="wire-cutters"> Southern Mockingbird
+    </form>
+
+    <button id = "done-button">Done!</button>
+
+</body>
+
+</html>
