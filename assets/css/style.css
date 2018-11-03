@@ -8,6 +8,7 @@ header {
     display: inline block;
     letter-spacing: 4px;
     color: white;
+    /* text-shadow: nifty new css trick */
     text-shadow: 2px 2px 2px black;
     position: fixed;
     top: 0px;
@@ -28,17 +29,23 @@ header {
     font-size: 18px;
     font-weight: bold;
 }
-#done-button {
+
+.button {
     letter-spacing: 2px;
     font-family: 'Alegreya Sans', sans-serif;
     color: rgb(51, 51, 51);
     background: linear-gradient(lightgrey, white);
-    margin: 50px 0px 0px 0px;
     font-size: 30px;
     padding: 5px 15px 5px 15px;
     border-radius: 6px;
     border-bottom: grey solid 2px;
     border-right: grey solid 2px;
+}
+#done-button {
+    margin: 50px 0px 0px 0px;
+}
+#start-button {
+    margin: 0px 0px 35px 0px;
 }
 #restart-button {
     letter-spacing: 2px;

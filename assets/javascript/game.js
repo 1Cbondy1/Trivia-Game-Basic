@@ -1,21 +1,39 @@
 window.onload = function() {
-    $("form").on("click", stopwatch.start);
+    $("#start-button").on("click", stopwatch.start);
+    $(".choice").on("click", stopwatch.correctCount);
     $("#done-button").on("click", stopwatch.stop);
     $("#restart-button").on("click", stopwatch.reset);
 };
 
 var intervalId;
 var clockRunning = false;
+var correctAnswers = 0;
 
 var stopwatch = {
 
     time: 60,
 
+    correctCount: function() {
+        if (clockRunning) {
+            var selection = $(this).val().trim();
+            if (selection === "correct" && correctAnswers < 7) {
+                correctAnswers++
+            }
+            else if (correctAnswers > 7) {
+                stopwatch.stop();
+            }
+        }
+        else if (!clockRunning) {
+            event.preventDefault();
+        }
+    },
+
     reset: function() {
         stopwatch.stop();
         stopwatch.time = 60;
+        correctAnswers = 0;
         $("#time-remaining").text("1:00");
-        $("input[name='choice']").prop('checked', false);
+        $("input[type='radio']").prop('checked', false);
     },
 
     start: function() {
@@ -28,8 +46,7 @@ var stopwatch = {
     stop: function() {
         clearInterval(intervalId);
         clockRunning = false;
-        $("#time-remaining").html("Score: " + "100");
-        
+        $("#time-remaining").html("Score:" + correctAnswers + "/7");
     },
 
     count: function() {
@@ -37,6 +54,9 @@ var stopwatch = {
             stopwatch.time--;
             var converted = stopwatch.timeConverter(stopwatch.time);
             $("#time-remaining").text(converted);
+        }
+        else {
+            stopwatch.stop();
         }
     },
 
@@ -58,4 +78,4 @@ var stopwatch = {
 
         return minutes + ":" + seconds;
         }
-};
+};                
